@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
 
@@ -55,9 +55,15 @@ const Navbar = () => {
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image src={logo} className=" w-12 h-12" />
         <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-          <Link href="/">
-            <li className="headerLink">Home</li>
-          </Link>
+          <li
+            onClick={() => {
+              setNav(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="headerLink"
+          >
+            Home
+          </li>
           <Link href="/#about" scroll={false}>
             <li className="headerLink">About</li>
           </Link>
@@ -100,12 +106,17 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul>
-              <Link href="/">
-                <li onClick={() => setNav(false)} className="headerLinkPhone">
-                  Home
-                </li>
-              </Link>
-              <Link href="/#about" scroll={false}>
+              <li
+                onClick={() => {
+                  setNav(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="headerLinkPhone"
+              >
+                Home
+              </li>
+
+              <Link href="/#about" scroll={true}>
                 <li onClick={() => setNav(false)} className="headerLinkPhone">
                   About
                 </li>
@@ -129,24 +140,36 @@ const Navbar = () => {
             <div className="pt-40">
               <p className="uppercase tracking-widest ">Let's Connect</p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href="https://www.linkedin.com/in/baihakidemiandra/">
-                    <FaLinkedinIn />
-                  </Link>
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href="https://github.com/baihakidp">
-                    <FaGithub />
-                  </Link>
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href="https://wa.me/6285155430035" scroll={false}>
-                    <AiOutlineMail />
-                  </Link>
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                <Link
+                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                  href="https://www.linkedin.com/in/baihakidemiandra/"
+                  target="_blank"
+                >
+                  <FaLinkedinIn />
+                </Link>
+                <Link
+                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                  href="https://github.com/baihakidp"
+                  target="_blank"
+                >
+                  <FaGithub />
+                </Link>
+
+                <Link
+                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                  href="https://wa.me/6285155430035"
+                  scroll={false}
+                  target="_blank"
+                >
+                  <FaWhatsapp />
+                </Link>
+
+                <Link
+                  href="/"
+                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                >
                   <BsPersonLinesFill />
-                </div>
+                </Link>
               </div>
             </div>
           </div>

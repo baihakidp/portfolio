@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const Main = () => {
   return (
@@ -21,24 +21,34 @@ const Main = () => {
             responsive and visually engaging web applications.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href="https://www.linkedin.com/in/baihakidemiandra/">
-                <FaLinkedinIn />
-              </Link>
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href="https://github.com/baihakidp">
-                <FaGithub />
-              </Link>
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <Link href="https://wa.me/6285155430035" scroll={false}>
-                <AiOutlineMail />
-              </Link>
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            <Link
+              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+              href="https://www.linkedin.com/in/baihakidemiandra/"
+              target="_blank"
+            >
+              <FaLinkedinIn />
+            </Link>
+            <Link
+              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+              href="https://github.com/baihakidp"
+              target="_blank"
+            >
+              <FaGithub />
+            </Link>
+            <Link
+              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+              href="https://wa.me/6285155430035"
+              scroll={false}
+              target="_blank"
+            >
+              <FaWhatsapp />
+            </Link>
+            <Link
+              href="/"
+              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+            >
               <BsFillPersonLinesFill />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

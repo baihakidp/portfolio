@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -10,23 +10,28 @@ import emailjs, { sendForm } from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  function handleSend() {
+    setIsSent(true);
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs;
-    // sendForm(
-    //   "service_fkf9c6w",
-    //   "template_l08q90e",
-    //   form.current,
-    //   "ZlJ3EHugeOnlalc5e"
-    // ).then(
-    //   (result) => {
-    //     console.log(result.text);
-    //   },
-    //   (error) => {
-    //     console.log(error.text);
-    //   }
-    // );
+    sendForm(
+      "service_fkf9c6w",
+      "template_l08q90e",
+      form.current,
+      "ZlJ3EHugeOnlalc5e"
+    ).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
@@ -55,17 +60,24 @@ const Contact = () => {
                   <p className="uppercase pt-8">Connect With Me</p>
                   <div className="flex items-center justify-between py-4">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <Link href="https://www.linkedin.com/in/baihakidemiandra/">
+                      <Link
+                        href="https://www.linkedin.com/in/baihakidemiandra/"
+                        target="_blank"
+                      >
                         <FaLinkedinIn />
                       </Link>
                     </div>
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <Link href="https://github.com/baihakidp">
+                      <Link href="https://github.com/baihakidp" target="_blank">
                         <FaGithub />
                       </Link>
                     </div>
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                      <Link href="https://wa.me/6285155430035" scroll={false}>
+                      <Link
+                        href="https://wa.me/6285155430035"
+                        scroll={false}
+                        target="_blank"
+                      >
                         <AiOutlineMail />
                       </Link>
                     </div>
@@ -106,23 +118,29 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <button className="w-full p-4 mt-4">Send Message</button>
-                <p className="pt-3">
-                  Thanks for the message! Looking forward to speaking to you
-                  soon.
-                </p>
+                <button onClick={handleSend} className="w-full p-4 mt-4">
+                  Send Message
+                </button>
+                {isSent && (
+                  <p className="pt-3">
+                    Thanks for the message! Looking forward to speaking to you
+                    soon.
+                  </p>
+                )}
               </form>
             </div>
           </div>
         </div>
       </div>
       <div className="flex justify-center py-12">
-        <Link
-          href="/"
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
         >
           <HiOutlineChevronUp size={30} />
-        </Link>
+        </button>
       </div>
     </div>
   );

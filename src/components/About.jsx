@@ -23,7 +23,7 @@ const About = () => {
             I am now spending my time building projects with Next JS, Tailwind
             CSS, Firebase, and still learning new technologies.
           </p>
-          <Link href="/#projects">
+          <Link href="/#projects" scroll={false}>
             <p className="py-2 text-gray-600 underline cursor-pointer">
               Check out some of my latest projects.
             </p>

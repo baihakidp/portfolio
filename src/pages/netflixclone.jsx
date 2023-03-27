@@ -35,7 +35,7 @@ const netflixclone = () => {
             this app by fill the email and password section and press the sign
             up button.
           </p>
-          <Link href="https://project-1-baihaki.vercel.app/">
+          <Link href="https://project-1-baihaki.vercel.app/" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </Link>
           <Link href="https://github.com/baihakidp/netflix-clone">

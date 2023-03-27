@@ -30,10 +30,16 @@ const rentalcustomer = () => {
             A group project using React JS. You can try by register first and
             then log in to try the feature.
           </p>
-          <Link href="https://customer-platinum-challenge.vercel.app/">
+          <Link
+            href="https://customer-platinum-challenge.vercel.app/"
+            target="_blank"
+          >
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </Link>
-          <Link href="https://github.com/galihandrii/platinum-challenge">
+          <Link
+            href="https://github.com/galihandrii/platinum-challenge"
+            target="_blank"
+          >
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </Link>
         </div>
