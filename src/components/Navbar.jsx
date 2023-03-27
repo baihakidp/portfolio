@@ -165,8 +165,9 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                  href="/"
+                  href="https://drive.google.com/file/d/1P2718S77za94pI7Hsvl_4t0SHSrjG11n/view"
                   className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
+                  target="_blank"
                 >
                   <BsPersonLinesFill />
                 </Link>

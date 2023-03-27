@@ -31,10 +31,16 @@ const rentaladmin = () => {
             email on customer website. Users are able to create, add, delete,
             edit car API.
           </p>
-          <Link href="https://adminplatinum.vercel.app/dashboard">
+          <Link
+            href="https://adminplatinum.vercel.app/dashboard"
+            target="_blank"
+          >
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </Link>
-          <Link href="https://github.com/baihakidp/adminplatinum">
+          <Link
+            href="https://github.com/baihakidp/adminplatinum"
+            target="_blank"
+          >
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </Link>
         </div>
