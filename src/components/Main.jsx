@@ -44,7 +44,7 @@ const Main = () => {
               <FaWhatsapp />
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1P2718S77za94pI7Hsvl_4t0SHSrjG11n/view"
+              href="https://drive.google.com/file/d/1rDXiQ7Hn9rV8hG16dCylytWeejwAP5nW/view?usp=share_link"
               className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
               target="_blank"
             >

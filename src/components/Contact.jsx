@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useRef, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import contact from "../assets/contact.jpg";
 import { HiOutlineChevronUp } from "react-icons/hi";
 import emailjs, { sendForm } from "@emailjs/browser";
@@ -78,12 +78,15 @@ const Contact = () => {
                         scroll={false}
                         target="_blank"
                       >
-                        <AiOutlineMail />
+                        <FaWhatsapp />
                       </Link>
                     </div>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <Link
+                      href="https://drive.google.com/file/d/1rDXiQ7Hn9rV8hG16dCylytWeejwAP5nW/view"
+                      className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+                    >
                       <BsFillPersonLinesFill />
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
